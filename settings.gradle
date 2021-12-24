@@ -1,0 +1,5 @@
+include ':openCVLibrary343'
+include ':usbCameraCommon'
+include ':libuvccamera'
+include ':app'
+rootProject.name = "opencvanduvc"
