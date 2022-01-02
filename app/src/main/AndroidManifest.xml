@@ -4,6 +4,9 @@
     package="com.quip.opencvanduvc">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -15,11 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Opencvanduvc">
         <activity
-            android:name=".DeviceCamera"
+            android:name=".Settings"
             android:exported="false" />
         <activity
-            android:name=".Splash"
-            android:screenOrientation="landscape">
+            android:name=".DeviceCamera"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,12 +32,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".MainActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="landscape" />
+            android:configChanges="keyboardHidden|orientation" />
     </application>
 
 </manifest>

@@ -47,9 +47,9 @@ public class Splash extends AppCompatActivity {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
             setContentView(R.layout.activity_splash);
-            connect_usb_lay = findViewById(R.id.connect_usb_lay);
-            connected_lay = findViewById(R.id.connected_lay);
-            usb = findViewById(R.id.usb);
+           // connect_usb_lay = findViewById(R.id.connect_usb_lay);
+           // connected_lay = findViewById(R.id.connected_lay);
+           // usb = findViewById(R.id.usb);
 
             setFullscreen();
 
@@ -59,11 +59,22 @@ public class Splash extends AppCompatActivity {
             } else {
                 requestPermission();
             }
-            showConnectUSB();
+           // showConnectUSB();
 
+        new Thread(new Runnable() {
+    @Override
+    public void run() {
+        try {
+            Thread.sleep(3000);
             Intent intent = new Intent(Splash.this, DeviceCamera.class);
             startActivity(intent);
             finish();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}).start();
+
 
         } catch (Exception e) {
             e.printStackTrace();

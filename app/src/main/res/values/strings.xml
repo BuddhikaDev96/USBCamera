@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">opencvanduvc</string>
+    <string name="focuspeaking" translatable="false">Focus Peaking</string>
+    <string name="focuspeaking_color" translatable="false">Focus Peaking Color</string>
     <string name="back">Back</string>
     <string name="enable_pro">ENABLE PRO</string>
     <string name="resolution">RESOLUTION</string>

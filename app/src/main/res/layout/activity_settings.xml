@@ -4,190 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity">
+    tools:context=".Settings">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/settings_layer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/setting_close_btn"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="@android:color/darker_gray"
-            android:backgroundTint="@android:color/darker_gray"
-            android:padding="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_settings_24" />
-
-        <LinearLayout
-            android:id="@+id/settings_main"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="vertical"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/focuspeaking"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/setting_close_btn">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/enable_pro_btn"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/enable_pro"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/resolution_btn"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/resolution"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/presets_btn"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/presets"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/settings_main_close_btn"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/back"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/resolution_layer"
+        <Switch
+            android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="vertical"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="On "
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/focuspeaking_color"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/setting_close_btn">
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/resolution"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView18"
+            app:layout_constraintStart_toEndOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
-            <Button
-                android:id="@+id/hd_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/performance_hd"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Red"
+            app:layout_constraintBottom_toBottomOf="@+id/switch2"
+            app:layout_constraintEnd_toStartOf="@+id/switch2"
+            app:layout_constraintStart_toStartOf="@+id/switch1"
+            app:layout_constraintTop_toTopOf="@+id/switch2" />
 
-            <Button
-                android:id="@+id/fhd_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/quality_fhd"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_weight="1"
-                    android:background="@color/tranceparent"
-                    android:backgroundTint="@color/tranceparent"
-                    android:text="60FPS"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/fpsswitch"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Switch
-                    android:id="@+id/fpsswitch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="2"
-                    android:checked="true"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView8"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <Button
-                android:id="@+id/resolution_back_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/tranceparent"
-                android:backgroundTint="@color/tranceparent"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:text="@string/back"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Green"
+            app:layout_constraintBottom_toBottomOf="@+id/switch2"
+            app:layout_constraintStart_toEndOf="@+id/switch2"
+            app:layout_constraintTop_toTopOf="@+id/switch2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

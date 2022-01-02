@@ -241,7 +241,7 @@ public class ImageProcess {
     }
 
     //HISTOGRAM
-    int histW = 2048, histH = 550;
+    int histW = 500, histH = 300;
     public Bitmap Histogram(Bitmap bitmap) {
         Mat src = new Mat();
         Utils.bitmapToMat(bitmap, src);
